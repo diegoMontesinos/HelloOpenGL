@@ -13,6 +13,10 @@
 		951A77F01E26A7A300E56CF0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951A77EE1E26A7A300E56CF0 /* MainMenu.xib */; };
 		951A77FB1E26A7A400E56CF0 /* HelloOpenGLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 951A77FA1E26A7A400E56CF0 /* HelloOpenGLTests.m */; };
 		951A78061E26A7A400E56CF0 /* HelloOpenGLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 951A78051E26A7A400E56CF0 /* HelloOpenGLUITests.m */; };
+		951A78151E26B10300E56CF0 /* AGLOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 951A78141E26B10300E56CF0 /* AGLOpenGLView.m */; };
+		9586EFC51E26D6D4004F2D0A /* NPDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 9586EFC41E26D6D4004F2D0A /* NPDisplayLink.m */; };
+		9586EFC81E26DD63004F2D0A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9586EFC61E26DC96004F2D0A /* OpenGL.framework */; };
+		95ADFB291E26D362003192DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95ADFB281E26D362003192DD /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,12 @@
 		951A78011E26A7A400E56CF0 /* HelloOpenGLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloOpenGLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		951A78051E26A7A400E56CF0 /* HelloOpenGLUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloOpenGLUITests.m; sourceTree = "<group>"; };
 		951A78071E26A7A400E56CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		951A78131E26B10300E56CF0 /* AGLOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLOpenGLView.h; sourceTree = "<group>"; };
+		951A78141E26B10300E56CF0 /* AGLOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLOpenGLView.m; sourceTree = "<group>"; };
+		9586EFC31E26D6D4004F2D0A /* NPDisplayLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPDisplayLink.h; sourceTree = "<group>"; };
+		9586EFC41E26D6D4004F2D0A /* NPDisplayLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPDisplayLink.m; sourceTree = "<group>"; };
+		9586EFC61E26DC96004F2D0A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		95ADFB281E26D362003192DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9586EFC81E26DD63004F2D0A /* OpenGL.framework in Frameworks */,
+				95ADFB291E26D362003192DD /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +92,7 @@
 				951A77F91E26A7A400E56CF0 /* HelloOpenGLTests */,
 				951A78041E26A7A400E56CF0 /* HelloOpenGLUITests */,
 				951A77E41E26A7A300E56CF0 /* Products */,
+				95ADFB271E26D362003192DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +110,14 @@
 			isa = PBXGroup;
 			children = (
 				951A77E61E26A7A300E56CF0 /* AppDelegate.h */,
+				9586EFC21E26D6D4004F2D0A /* NPDisplayLink */,
 				951A77E71E26A7A300E56CF0 /* AppDelegate.m */,
 				951A77EC1E26A7A300E56CF0 /* Assets.xcassets */,
 				951A77EE1E26A7A300E56CF0 /* MainMenu.xib */,
 				951A77F11E26A7A300E56CF0 /* Info.plist */,
 				951A77E91E26A7A300E56CF0 /* Supporting Files */,
+				951A78131E26B10300E56CF0 /* AGLOpenGLView.h */,
+				951A78141E26B10300E56CF0 /* AGLOpenGLView.m */,
 			);
 			path = HelloOpenGL;
 			sourceTree = "<group>";
@@ -130,6 +146,24 @@
 				951A78071E26A7A400E56CF0 /* Info.plist */,
 			);
 			path = HelloOpenGLUITests;
+			sourceTree = "<group>";
+		};
+		9586EFC21E26D6D4004F2D0A /* NPDisplayLink */ = {
+			isa = PBXGroup;
+			children = (
+				9586EFC31E26D6D4004F2D0A /* NPDisplayLink.h */,
+				9586EFC41E26D6D4004F2D0A /* NPDisplayLink.m */,
+			);
+			path = NPDisplayLink;
+			sourceTree = "<group>";
+		};
+		95ADFB271E26D362003192DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9586EFC61E26DC96004F2D0A /* OpenGL.framework */,
+				95ADFB281E26D362003192DD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9586EFC51E26D6D4004F2D0A /* NPDisplayLink.m in Sources */,
 				951A77EB1E26A7A300E56CF0 /* main.m in Sources */,
 				951A77E81E26A7A300E56CF0 /* AppDelegate.m in Sources */,
+				951A78151E26B10300E56CF0 /* AGLOpenGLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +528,7 @@
 				951A780C1E26A7A400E56CF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		951A780D1E26A7A400E56CF0 /* Build configuration list for PBXNativeTarget "HelloOpenGLTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +537,7 @@
 				951A780F1E26A7A400E56CF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		951A78101E26A7A400E56CF0 /* Build configuration list for PBXNativeTarget "HelloOpenGLUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +546,7 @@
 				951A78121E26A7A400E56CF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
